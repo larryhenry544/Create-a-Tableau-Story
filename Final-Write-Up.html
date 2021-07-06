@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Larry Henry Jr." />
+  <meta name="dcterms.date" content="2021-07-06" />
+  <title>Create a Tableau Story</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Create a Tableau Story</h1>
+<p class="author">Larry Henry Jr.</p>
+<p class="date">July 6, 2021</p>
+</header>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#links">Links</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#design">Design</a></li>
+<li><a href="#feedback">Feedback</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://public.tableau.com/app/profile/larry.henry/viz/ProsperLoanDataExplorationusingTableauv1/Story1">Initial Version</a></li>
+<li><a href="https://public.tableau.com/app/profile/larry.henry/viz/ProsperLoanDataExplorationusingTableauv2/Story1">Final Version</a></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>This project is part of the Udacity’s Data Analyst Nanodegree Program. I conducted an Exploratory Data Analysis (EDA) using <a href="https://public.tableau.com/s/">Tableau</a> on one of the curated data sets, provided by Udacity, from <a href="https://www.prosper.com/plp/about/">Prosper</a>, which is America’s first <a href="https://www.prosper.com/personal-loans">marketplace lending platform</a>, with over $12 billion in funded loans as of June 2021.</p>
+<p>This data set contains 113,937 loans with 81 variables on each loan, including loan amount, borrower rate (or interest rate), current loan status, borrower income, borrower employment status, borrower credit history, and the latest payment information. The dataset contains loans created between 2005-Q4 and 2014-Q1 with a last updated date of 03/11/2014. Here’s a link to the <a href="https://docs.google.com/spreadsheets/d/1gDyi_L4UvIrLTEC6Wri5nbaMmkGmLQBk-Yx3z0XDEtI/edit#gid=0">variable definitions</a> for this dataset.</p>
+<blockquote>
+<p>The main purpose of this project is to create a tableau story where we explore the dataset and identify relationships among multiple variables using using Exploratory Data Analysis (EDA) and data visualizations.</p>
+</blockquote>
+<h2 id="design">Design:</h2>
+<ul>
+<li>Audience:
+<ul>
+<li>Udacity Reviewer’s and Students.</li>
+<li>Potential investors and borrowers.</li>
+<li>Individuals interested in Peer-to-Peer lending.</li>
+</ul></li>
+<li>The visualization will address the following:
+<ul>
+<li>Key attributes in the dataset I will be focusing on are: interest rate and risk. This is to help potential investors/borrowers make informative decisions.</li>
+<li>Relationships between the key attributes.</li>
+<li>Interesting/Unusual data points.</li>
+<li>Interactive views showing how the key attributes change based on the different variables/values.</li>
+</ul></li>
+<li>Chart Types:
+<ul>
+<li>Packed Bubbles: this chart will be used to visualize the number of loans originated per state based on the loan origination year using a cluster of circles.</li>
+<li>Map: this chart will be used to visualize the data geographically (per state) and help the readers understand and explore how the key attributes vary depending on the state.</li>
+<li>Bar chart: bar chart will be utilized significantly as the dataset include many categorical variables (such as: employment and loan status, income range, risk rating, etc.). Using bar charts will help compare specific measures across the different categories.</li>
+<li>100-stacked bar charts: this type will be used to show a breakdown of loan status (Current vs. Delinquent) across specific categorical variables.</li>
+<li>Scatterplot: this visual will be used to plot two measures (such as borrower/interest rate and debt-to-income) to identify any possible relationships.</li>
+<li>Text table: this visual will be used conservatively to show very specific values to help the reader spot the exact values explained in the description.</li>
+</ul></li>
+<li>Encoding:
+<ul>
+<li>Color Marks: I will use colors mainly to differentiate between loans that are current and those that are delinquent.</li>
+<li>Filters: I will use interactive filters and shelf filters.</li>
+<li>Field/value calculations: calculate specific values for the reader or fields to be used to organize (sort) the 100-stacked bar chart.</li>
+</ul></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>I asked for feedback on all stages of design from 4 different people. Sometimes the questons and answers where verbal and others were documented. Please see the following feedback.</p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 33%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Review</th>
+<th style="text-align: center;">Reviewer</th>
+<th>Feedback</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: center;">Peer</td>
+<td>The Summary by State was cut off when viewing this page on my desktop and the zoom was at 100%. I can see the wording if I zoom out more. This also applies to the other pages too. On the far right, some of the wording and graphics were cut off because of the zoom.</td>
+<td>Rearranged graphs</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: center;">Peer</td>
+<td>The income range was cut off at the bottom, and I was unable to scroll.</td>
+<td>Rearranged graphs</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: center;">Peer</td>
+<td>A short description that stands out a little bit on the landing page might help the viewer understand what it is all about.</td>
+<td>Updated the introduction section to include and highlight key information the reader needs to focus on.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: center;">Peer</td>
+<td>It may look better to number your pages and move the information to the page’s subtitle</td>
+<td>Updated story points to numbers and moved text to subtitle</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>https://www.prosper.com/</li>
+<li>https://www.youtube.com/watch?v=EFEK0m4xK1o</li>
+<li>https://kb.tableau.com/articles/howto/showing-hawaii-and-alaska-near-continental-us</li>
+<li>https://help.tableau.com/current/pro/desktop/en-us/maps_howto_simple.htm</li>
+<li>https://help.tableau.com/current/pro/desktop/en-gb/dashboards_organize_floatingandtiled.htm</li>
+<li>http://gamapserver.who.int/gho/interactive_charts/mbd/life_expectancy/atlas.html</li>
+</ul>
+</body>
+</html>

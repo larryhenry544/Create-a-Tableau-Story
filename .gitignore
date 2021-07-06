@@ -1,0 +1,6 @@
+.github/**
+*.pyc
+drafts/**
+*.csv
+*.PNG
+Final-Write-Up-for-conversion.md
