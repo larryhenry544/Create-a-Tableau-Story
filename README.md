@@ -8,7 +8,7 @@ Based on the instructions above, I delivered the following:
 
 - [Initial Version](https://public.tableau.com/app/profile/larry.henry/viz/ProsperLoanDataExplorationusingTableauv1/Story1)
 - [Final Version](https://public.tableau.com/app/profile/larry.henry/viz/ProsperLoanDataExplorationusingTableauv2/Story1)
-- [Final Write-up]()
+- [Final Write-up](https://github.com/larryhenry544/Udacity-Create-a-Tableau-Story/blob/main/Final-Write-Up.pdf)
 
 ## Project Overview
 
